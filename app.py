@@ -21,7 +21,7 @@ def get_latest_data():
             building_data = json.load(f)
         with open(f'{data_folder}/certificates_{today}.json') as f:
             certificate_data = json.load(f)
-    except FileNotFoundError:
+    except Exception:
         response = requests.get(URL_BUILDING_DATA.format(today))
         reader = csv.DictReader(response.content.decode("utf-8").replace("﻿", "").splitlines())
         building_data = [row for row in reader]
