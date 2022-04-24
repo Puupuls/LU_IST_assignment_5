@@ -75,7 +75,7 @@
                         let buildings_html = "";
                         let certificates_html = "";
                         if (buildings.length > 0) {
-                            buildings_html += "<div class='accordion-item'><div class='accordion-header' id='buildingsHeading'> <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#buildings' aria-expanded='true' aria-controls='buildings'><h3>Buildings (" + buildings.length + " entries)</h3></button></div><div id='buildings' class='accordion-collapse collapse' aria-labelledby='buildingsHeading' data-bs-parent='#results'>";
+                            buildings_html += "<div class='accordion-item'><div class='accordion-header' id='buildingsHeading'> <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#buildings' aria-expanded='false' aria-controls='buildings'><h3>Buildings (" + buildings.length + " entries)</h3></button></div><div id='buildings' class='accordion-collapse collapse' aria-labelledby='buildingsHeading' data-bs-parent='#results'>";
                             buildings.forEach(function (building) {
                                 buildings_html += "<div class='card mb-4'> <div class='card-body'>"
                                 for (let key in building) {
@@ -89,7 +89,7 @@
                             buildings_html += "</div></div>";
                         }
                         if (certificates.length > 0) {
-                            certificates_html += "<div class='accordion-item'><div class='accordion-header' id='certificatesHeading'> <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#certificates' aria-expanded='true' aria-controls='certificates'><h3>Certificates (" + certificates.length + " entries)</h3></button></div><div id='certificates' class='accordion-collapse collapse' aria-labelledby='certificatesHeading' data-bs-parent='#results'>";
+                            certificates_html += "<div class='accordion-item'><div class='accordion-header' id='certificatesHeading'> <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#certificates' aria-expanded='false' aria-controls='certificates'><h3>Certificates (" + certificates.length + " entries)</h3></button></div><div id='certificates' class='accordion-collapse collapse' aria-labelledby='certificatesHeading' data-bs-parent='#results'>";
                             certificates.forEach(function (certificate) {
                                 certificates_html += "<div class='card mb-4'><div class='card-body'>"
                                 for (let key in certificate) {
